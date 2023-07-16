@@ -4,7 +4,6 @@
   padding: 15px 0;
   border: none;
   border-radius: 8px;
-  font-size: 1.2em;
   font-family: 'Quicksand', sans-serif;
 }
 
@@ -14,6 +13,6 @@
 }
 
 .deleteButton {
-  margin: 0;
-  width: 35%;
+  margin: 5px;
+  width: 20%;
 }
