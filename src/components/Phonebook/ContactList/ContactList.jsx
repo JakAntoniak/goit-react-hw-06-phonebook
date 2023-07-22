@@ -10,7 +10,7 @@ export const ContactList = () => {
   const shownContacts = contacts.filter(person =>
     person.name.toLowerCase().includes(filter.toLowerCase())
   );
-  console.log(shownContacts);
+
   const dispatch = useDispatch();
 
   const handleDeleteContact = id => dispatch(deleteContact(id));
