@@ -19,8 +19,7 @@ export const ContactForm = () => {
     if (nameExists) {
       alert(`${nameInput} is already present in the phonebook`);
       return;
-    }
-    {
+    } else {
       dispatch(addContact(nameInput, numberInput));
     }
   };
