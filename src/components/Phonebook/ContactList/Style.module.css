@@ -1,8 +1,9 @@
 .deleteButton {
   width: 100%;
   margin: 20px auto;
-  padding: 15px 0;
+  padding: 10px 0;
   border: none;
+  background-color: rgb(192, 189, 189);
   border-radius: 8px;
   font-family: 'Quicksand', sans-serif;
 }

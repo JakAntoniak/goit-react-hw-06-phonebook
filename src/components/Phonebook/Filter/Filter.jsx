@@ -1,7 +1,16 @@
+import { useDispatch } from 'react-redux';
 import css from './Style.module.css';
-import PropTypes from 'prop-types';
+import { setStatusFilter } from 'components/Redux/filterSlice';
 
-const Filter = ({ handleFilterUpdate }) => {
+const Filter = () => {
+  const dispatch = useDispatch();
+
+  const handleFilterUpdate = () => {
+    const filterValue = document.querySelector('#filter-input').value;
+
+    dispatch(setStatusFilter(filterValue));
+  };
+
   return (
     <div className={css.filter}>
       <label>Find contacts by name</label>
@@ -16,10 +25,6 @@ const Filter = ({ handleFilterUpdate }) => {
       />
     </div>
   );
-};
-
-Filter.propTypes = {
-  handleFilterUpdate: PropTypes.func,
 };
 
 export default Filter;
