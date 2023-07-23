@@ -3,7 +3,7 @@ import { nanoid } from 'nanoid';
 
 const savedContacts = JSON.parse(localStorage.getItem('contacts')) || [];
 
-const contactsInitialState = savedContacts;
+const contactsInitialState = savedContacts || [];
 
 const contactsSlice = createSlice({
   name: 'contacts',
