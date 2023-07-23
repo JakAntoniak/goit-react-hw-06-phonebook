@@ -14,9 +14,7 @@ export const ContactForm = () => {
     const nameInput = document.querySelector('#name').value;
     const numberInput = document.querySelector('#number').value;
 
-    const nameExists = (contacts || []).some(
-      contact => contact.name === nameInput
-    );
+    const nameExists = contacts.some(contact => contact.name === nameInput);
 
     if (nameExists) {
       alert(`${nameInput} is already present in the phonebook`);
