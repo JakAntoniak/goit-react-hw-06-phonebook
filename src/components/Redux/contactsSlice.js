@@ -1,9 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { nanoid } from 'nanoid';
 
-const savedContacts = JSON.parse(localStorage.getItem('contacts')) || {
-  contacts: [],
-};
+const savedContacts = JSON.parse(localStorage.getItem('contacts')) || [];
 
 const contactsInitialState = savedContacts;
 
