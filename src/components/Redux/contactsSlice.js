@@ -3,7 +3,7 @@ import { nanoid } from 'nanoid';
 
 const savedContacts = JSON.parse(localStorage.getItem('contacts')) || [];
 
-const contactsInitialState = savedContacts || [];
+const contactsInitialState = savedContacts;
 
 const contactsSlice = createSlice({
   name: 'contacts',
@@ -11,7 +11,7 @@ const contactsSlice = createSlice({
   reducers: {
     addContact: {
       reducer(state, action) {
-        state.contacts.push(action.payload);
+        (state.contacts || []).push(action.payload);
         localStorage.setItem('contacts', JSON.stringify(state));
       },
       prepare(name, number) {
